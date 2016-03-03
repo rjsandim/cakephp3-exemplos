@@ -1,12 +1,13 @@
 ExemploViews/index<br>
 
 
-<?=$this->element('item', ['valores' => $item]); ?>
+<?=$this->element('item'); ?>
 
+<a href="exemplos-views/outra-action">Link Para outra Action</a>
 
 <form method="post">
 
-
+	<?=$this->Form->input('title'); ?>
 	<input type="text" name="nome">
 
 	<input type="checkbox" name="valor[]" value="check1"> 1
@@ -14,3 +15,5 @@ ExemploViews/index<br>
 
 	<input type="submit">
 </form>
+
+<?=$this->MeuTexto->digitaNomeDaTurma(2016);?>
