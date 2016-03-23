@@ -10,6 +10,8 @@ namespace App\Controller;
 
 class ExemplosViewsController extends AppController{
 
+	public $helpers = ['MeuTexto'];
+
 	public function index() {
 
 		$item = [1, 2, 3];
