@@ -1,3 +1,3 @@
 <?php
 
-$this->request->session()->write("valor2", 5);
+$this->request->session()->write("exemplo-view", 'sim');
