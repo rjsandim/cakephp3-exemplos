@@ -62,7 +62,6 @@ class AppController extends Controller
     }
 
     public function beforeFilter(Event $event) {
-        Debugger::dump("Isso é coisa do pai!");
         $this->viewBuilder()->layout('personalizado');
     }
 }
