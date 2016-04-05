@@ -10,7 +10,7 @@
 namespace App\Model\Table;
 
 use Cake\ORM\Table;
-
+use Cake\ORM\TableRegistry;
 
 class ProdutosTable extends Table {
 
@@ -24,5 +24,30 @@ class ProdutosTable extends Table {
 		// podemos definir até uma nova classe para entidade
 		//  $this->entityClass('App\Model\Entity\NomeDaClasse');
 	}
+
+
+	public function buscarCategorias() {
+
+		$categorias = TableRegistry::get('Categorias');
+
+	}
+
+	/*
+	 * Event List
+	 *	Model.initialize
+	 * 	Model.beforeMarshal
+	 *  	Model.beforeFind
+	 *	Model.buildValidator
+	 *	Model.buildRules
+	 *	Model.beforeRules
+	 *	Model.afterRules
+	 *	Model.beforeSave
+	 *	Model.afterSave
+	 *	Model.afterSaveCommit
+	 *	Model.beforeDelete
+	 *	Model.afterDelete
+	 *	Model.afterDeleteCommit
+	 */
+
 
 }

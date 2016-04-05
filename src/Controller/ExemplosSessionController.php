@@ -62,6 +62,7 @@ class ExemplosSessionController extends AppController {
 		//podemos também add valores em um array dinamico
 		for ($i = 0; $i < 10; $i++) {
 			$data = $session->read('valor-vetor');
+			Debugger::dump($data);
 			$data[] = 'valor '.$i;
 			$session->write('valor-vetor', $data);
 		}
