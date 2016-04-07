@@ -13,6 +13,12 @@ use Cake\Network\Session;
 
 class ExemplosSessionController extends AppController {
 
+	public function initialize() {
+		parent::initialize();
+
+		$this->loadComponent('Carrinho');
+	}
+
 	public function index() {
 
 		// podemos escrever menos salvando a sessão em uma variável;
@@ -71,6 +77,11 @@ class ExemplosSessionController extends AppController {
 
 		//tudo isso também pode ser utilizado na VIEW, CONTROLLERS, HELPERS, CELLS e COMPONENTS;
 
+	}
+
+
+	public function adicionar() {
+		$this->Carrinho->adicionar(40, 2);
 	}
 
 }

@@ -23,6 +23,11 @@ class ProdutosTable extends Table {
 
 		// podemos definir até uma nova classe para entidade
 		//  $this->entityClass('App\Model\Entity\NomeDaClasse');
+
+
+		// DISPLAY FIELD ABAIXO (ATIVAR)!
+		//$this->displayField("nome");
+
 	}
 
 
