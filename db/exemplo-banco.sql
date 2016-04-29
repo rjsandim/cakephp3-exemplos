@@ -3,8 +3,8 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost:3306
--- Generation Time: Apr 06, 2016 at 09:11 PM
--- Server version: 5.5.42
+-- Generation Time: 29-Abr-2016 às 09:22
+-- Versão do servidor: 5.5.42
 -- PHP Version: 7.0.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -19,7 +19,7 @@ USE `exemplo-banco`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `categorias`
+-- Estrutura da tabela `categorias`
 --
 
 DROP TABLE IF EXISTS `categorias`;
@@ -29,7 +29,7 @@ CREATE TABLE `categorias` (
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `categorias`
+-- Extraindo dados da tabela `categorias`
 --
 
 INSERT INTO `categorias` (`id`, `nome`) VALUES
@@ -41,7 +41,7 @@ INSERT INTO `categorias` (`id`, `nome`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `produtos`
+-- Estrutura da tabela `produtos`
 --
 
 DROP TABLE IF EXISTS `produtos`;
@@ -53,7 +53,7 @@ CREATE TABLE `produtos` (
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `produtos`
+-- Extraindo dados da tabela `produtos`
 --
 
 INSERT INTO `produtos` (`id`, `slug`, `nome`, `categoria_id`) VALUES
@@ -70,14 +70,14 @@ INSERT INTO `produtos` (`id`, `slug`, `nome`, `categoria_id`) VALUES
 -- Indexes for table `categorias`
 --
 ALTER TABLE `categorias`
-ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `produtos`
 --
 ALTER TABLE `produtos`
-ADD PRIMARY KEY (`id`),
-ADD KEY `fk_categoria_id_idx` (`categoria_id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `fk_categoria_id_idx` (`categoria_id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -87,18 +87,18 @@ ADD KEY `fk_categoria_id_idx` (`categoria_id`);
 -- AUTO_INCREMENT for table `categorias`
 --
 ALTER TABLE `categorias`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `produtos`
 --
 ALTER TABLE `produtos`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
 --
 -- Constraints for dumped tables
 --
 
 --
--- Constraints for table `produtos`
+-- Limitadores para a tabela `produtos`
 --
 ALTER TABLE `produtos`
-ADD CONSTRAINT `fk_categoria_id` FOREIGN KEY (`categoria_id`) REFERENCES `categorias` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `fk_categoria_id` FOREIGN KEY (`categoria_id`) REFERENCES `categorias` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;

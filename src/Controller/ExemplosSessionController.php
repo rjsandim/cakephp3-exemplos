@@ -78,10 +78,5 @@ class ExemplosSessionController extends AppController {
 		//tudo isso também pode ser utilizado na VIEW, CONTROLLERS, HELPERS, CELLS e COMPONENTS;
 
 	}
-
-
-	public function adicionar() {
-		$this->Carrinho->adicionar(40, 2);
-	}
-
+	
 }

@@ -31,8 +31,23 @@ class CarrinhoComponent extends Component{
 		$this->session->write($chave, $quantidadeTotal);
 	}
 
-	public function remover($id, $quantidade) {
-		
+	public function remover($id, $quantidade = null) {
+
+		$chave = $this->nomeDaSessao.'.'.$id;
+
+		$quantidadeNoCarrinho = $this->session->read($chave);
+
+		if ($quantidade == null || $quantidadeNoCarrinho < $quantidade) {
+			$quantidadeFinal = 0;
+		} else {
+			$quantidadeFinal = $quantidadeNoCarrinho - $quantidade;
+		}
+
+		$this->session->write($chave, $quantidadeFinal);
+	}
+
+	public function listar() {
+		$this->session->read($this->nomeDaSessao);
 	}
 
 }
